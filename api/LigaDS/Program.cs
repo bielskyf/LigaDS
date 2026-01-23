@@ -1,6 +1,17 @@
+using System.Text.Json;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var envFile = Path.Combine(Directory.GetCurrentDirectory(), ".env.local");
+if (File.Exists(envFile))
+{
+    DotNetEnv.Env.Load(envFile);
+}
+
+var jsonOptions = new JsonSerializerOptions
+{
+    PropertyNameCaseInsensitive = true
+};
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

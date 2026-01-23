@@ -1,4 +1,6 @@
-﻿namespace LigaDS.Models
+﻿using LigaDS.Services;
+
+namespace LigaDS.Models
 {
     public class Atleta
     {
@@ -11,5 +13,37 @@
         public int Overall { get; set; }
         public int EquipeId { get; set; }
         public int LigaId { get; set; }
+    }
+
+    public class PlayerData
+    { 
+        public Player Player { get; set; }
+        public Statistics Statistics { get; set; }
+    }
+
+    public class Player
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public int Age { get; set; }
+        public string? Nationality { get; set; }
+        public string? Photo { get; set; }
+    }
+
+    public class Statistics
+    {
+        public Games Games { get; set; }
+    }
+
+    public class Games
+    {
+        public string? Position { get; set; }
+        public int? Rating { get; set; }
+    }
+    
+    public class ApiPlayersResponse
+    {
+        public Paging Paging { get; set; }
+        public List<PlayerData> Response { get; set; }
     }
 }

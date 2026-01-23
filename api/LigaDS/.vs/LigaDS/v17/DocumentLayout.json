@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Projetos\\LigaDS\\api\\LigaDS\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|d:\\projetos\\ligads\\api\\ligads\\services\\interfaces\\iapifootballservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|solutionrelative:services\\interfaces\\iapifootballservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|d:\\projetos\\ligads\\api\\ligads\\models\\equipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|solutionrelative:models\\equipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|d:\\projetos\\ligads\\api\\ligads\\models\\atleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|solutionrelative:models\\atleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|d:\\projetos\\ligads\\api\\ligads\\services\\apifootballservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|solutionrelative:services\\apifootballservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Equipe.cs",
+              "DocumentMoniker": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Models\\Equipe.cs",
+              "RelativeDocumentMoniker": "Models\\Equipe.cs",
+              "ToolTip": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Models\\Equipe.cs",
+              "RelativeToolTip": "Models\\Equipe.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAswBoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T23:33:00.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Atleta.cs",
+              "DocumentMoniker": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Models\\Atleta.cs",
+              "RelativeDocumentMoniker": "Models\\Atleta.cs",
+              "ToolTip": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Models\\Atleta.cs",
+              "RelativeToolTip": "Models\\Atleta.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAAC0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T22:24:23.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApiFootballService.cs",
+              "DocumentMoniker": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Services\\ApiFootballService.cs",
+              "RelativeDocumentMoniker": "Services\\ApiFootballService.cs",
+              "ToolTip": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Services\\ApiFootballService.cs",
+              "RelativeToolTip": "Services\\ApiFootballService.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAUwGYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T22:14:31.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IApiFootballService.cs",
+              "DocumentMoniker": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Services\\Interfaces\\IApiFootballService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IApiFootballService.cs",
+              "ToolTip": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Services\\Interfaces\\IApiFootballService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IApiFootballService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T22:14:12.114Z",
+              "EditorCaption": ""
             }
           ]
         }
