@@ -10,7 +10,7 @@ namespace LigaDS.Models
         public int LigaId { get; set; }
     }
 
-    public class TeamData
+    public class TeamFetchDTO
     {
         public Team Team { get; set; }
     }
@@ -25,6 +25,6 @@ namespace LigaDS.Models
     public class ApiTeamsResponse
     {
         public Paging Paging { get; set; }
-        public List<TeamData> Response { get; set; }
+        public List<TeamFetchDTO> Response { get; set; }
     }
 }

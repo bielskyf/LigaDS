@@ -15,10 +15,10 @@ namespace LigaDS.Models
         public int LigaId { get; set; }
     }
 
-    public class PlayerData
+    public class PlayerFetchDTO
     { 
         public Player Player { get; set; }
-        public Statistics Statistics { get; set; }
+        public List<Statistics> Statistics { get; set; }
     }
 
     public class Player
@@ -32,6 +32,8 @@ namespace LigaDS.Models
 
     public class Statistics
     {
+        public Team Team { get; set; }
+        public League League { get; set; }
         public Games Games { get; set; }
     }
 
@@ -44,6 +46,6 @@ namespace LigaDS.Models
     public class ApiPlayersResponse
     {
         public Paging Paging { get; set; }
-        public List<PlayerData> Response { get; set; }
+        public List<PlayerFetchDTO> Response { get; set; }
     }
 }

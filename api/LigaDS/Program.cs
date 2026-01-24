@@ -1,3 +1,5 @@
+using LigaDS.Services;
+using LigaDS.Services.Interfaces;
 using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,10 +10,9 @@ if (File.Exists(envFile))
     DotNetEnv.Env.Load(envFile);
 }
 
-var jsonOptions = new JsonSerializerOptions
-{
-    PropertyNameCaseInsensitive = true
-};
+builder.Services.AddScoped<IApiFootballService, ApiFootballService>();
+builder.Services.AddScoped<IAtletaService, AtletaService>();
+builder.Services.AddScoped<IEquipeService, EquipeService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

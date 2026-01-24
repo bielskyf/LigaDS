@@ -5,12 +5,6 @@ using System.Text.Json;
 
 namespace LigaDS.Services
 {
-    public class Paging
-    {
-        public int Current { get; set; }
-        public int Total { get; set; }
-    }
-
     public class ApiFootballService : IApiFootballService
     {
         private readonly HttpClient _httpClient;
@@ -42,7 +36,7 @@ namespace LigaDS.Services
             _logger = logger;
         }
 
-        private async Task<List<PlayerData>> GetPlayersAsync(int league, int season, int page, List<PlayerData> playersData)
+        private async Task<List<PlayerFetchDTO>> GetPlayersAsync(int league, int season, int page, List<PlayerFetchDTO> playersDTO)
         {
             var response = await _httpClient.GetAsync($"players?league={league}&season={season}&page={page}");
             response.EnsureSuccessStatusCode();
@@ -55,10 +49,10 @@ namespace LigaDS.Services
                     "Página {Current}/{Total} processada. Total acumulado: {Count} jogadores",
                     apiResponse.Paging.Current,
                     apiResponse.Paging.Total,
-                    playersData.Count
+                    playersDTO.Count
                 );
 
-                playersData.AddRange(apiResponse.Response);
+                playersDTO.AddRange(apiResponse.Response);
             }
 
             if (apiResponse?.Paging != null && apiResponse.Paging.Current < apiResponse.Paging.Total)
@@ -67,20 +61,20 @@ namespace LigaDS.Services
 
                 await Task.Delay(1000);
 
-                playersData = await GetPlayersAsync(league, season, nextPage, playersData);
+                playersDTO = await GetPlayersAsync(league, season, nextPage, playersDTO);
             }
 
-            return playersData;
+            return playersDTO;
         }
 
-        public async Task<List<PlayerData>> GetAllPlayersAsync(int league, int season)
+        public async Task<List<PlayerFetchDTO>> GetAllPlayersAsync(int league, int season)
         {
-            var playersData = new List<PlayerData>();
+            var playersDTO = new List<PlayerFetchDTO>();
 
             try
             {
-                playersData = await GetPlayersAsync(league, season, 1, playersData);
-                _logger.LogInformation("Total de {Count} jogadores obtidos.", playersData.Count);
+                playersDTO = await GetPlayersAsync(league, season, 1, playersDTO);
+                _logger.LogInformation("Total de {Count} jogadores obtidos.", playersDTO.Count);
             }
             catch (Exception ex)
             {
@@ -88,12 +82,12 @@ namespace LigaDS.Services
                 return null;
             }
 
-            return playersData;
+            return playersDTO;
         }
 
-        public async Task<List<TeamData>> GetAllTeamsAsync(int league, int season)
+        public async Task<List<TeamFetchDTO>> GetAllTeamsAsync(int league, int season)
         {
-            var teamsData = new List<TeamData>();
+            var teamsDTO = new List<TeamFetchDTO>();
 
             try
             {
@@ -105,10 +99,10 @@ namespace LigaDS.Services
 
                 if (apiResponse?.Response != null)
                 {
-                    teamsData.AddRange(apiResponse.Response);
+                    teamsDTO.AddRange(apiResponse.Response);
                 }
 
-                _logger.LogInformation("Total de {Count} equipes obtidas.", teamsData.Count);
+                _logger.LogInformation("Total de {Count} equipes obtidas.", teamsDTO.Count);
             }
             catch (Exception ex)
             {
@@ -116,7 +110,7 @@ namespace LigaDS.Services
                 return null;
             }
 
-            return teamsData;
+            return teamsDTO;
         }
     }
 }
