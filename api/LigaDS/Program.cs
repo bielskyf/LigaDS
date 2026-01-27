@@ -1,6 +1,7 @@
+using LigaDS.Data;
 using LigaDS.Services;
 using LigaDS.Services.Interfaces;
-using System.Text.Json;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +11,13 @@ if (File.Exists(envFile))
     DotNetEnv.Env.Load(envFile);
 }
 
-builder.Services.AddScoped<IApiFootballService, ApiFootballService>();
+builder.Services.AddDbContext<LigaDbContext>( options => 
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")
+    )
+);
+
+builder.Services.AddHttpClient<IApiFootballService, ApiFootballService>();
 builder.Services.AddScoped<IAtletaService, AtletaService>();
 builder.Services.AddScoped<IEquipeService, EquipeService>();
 

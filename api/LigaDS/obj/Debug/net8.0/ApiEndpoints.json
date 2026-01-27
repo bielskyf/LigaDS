@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "LigaDS.Controllers.AtletaController",
+    "Method": "GetAllNewPlayersAsync",
+    "RelativePath": "api/Atleta",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LigaDS.Controllers.AtletaController",
+    "Method": "AddAtleta",
+    "RelativePath": "api/Atleta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "atleta",
+        "Type": "LigaDS.Models.Atleta",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

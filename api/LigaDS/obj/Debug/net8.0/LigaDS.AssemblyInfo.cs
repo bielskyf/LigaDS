@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LigaDS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85ed45dab24ac517da71dd46215cac50207fd40d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d96ed523f64ff1716b9465eacfb58eaf99f5e32")]
 [assembly: System.Reflection.AssemblyProductAttribute("LigaDS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LigaDS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
