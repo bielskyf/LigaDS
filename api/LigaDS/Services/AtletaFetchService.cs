@@ -1,4 +1,5 @@
-﻿using LigaDS.Models;
+﻿using LigaDS.Mappers;
+using LigaDS.Models;
 using LigaDS.Services.Interfaces;
 
 namespace LigaDS.Services
@@ -19,52 +20,34 @@ namespace LigaDS.Services
 
             foreach (var playerDTO in playersDTO)
             {
-                atletas.Add(ConvertToAtletaModel(playerDTO, league));
+                var stats = playerDTO.Statistics.FirstOrDefault();
+                int overall = Convert.ToInt32(Convert.ToDouble(stats?.Games.Rating ?? 5) * OverallLeagueMapper(league));
+                var atleta = AtletaMapper.ToAtletaModel(playerDTO);
+                atleta.Overall = overall;
+                atleta.Posicao = PositionMapper(stats?.Games.Position ?? string.Empty);
             }
             
             return atletas;
         }
 
-        public Atleta ConvertToAtletaModel(PlayerFetchDTO playerDTO, int league)
+        private static string PositionMapper(string position)
         {
-            var stats = playerDTO.Statistics.FirstOrDefault();
-            string position = string.Empty;
-            int overall = Convert.ToInt32(Convert.ToDouble(stats?.Games.Rating ?? 5) * OverallLeagueMapper(league));
-
-            switch (stats?.Games.Position)
+            switch (position)
             {
                 case "Goalkeeper":
-                    position = "Goleiro";
-                    break;
+                    return "Goleiro";
                 case "Defender":
-                    position = "Defensor";
-                    break;
+                    return "Defensor";
                 case "Midfielder":
-                    position = "Meio-campista";
-                    break;
+                    return "Meio-campista";
                 case "Attacker":
-                    position = "Atacante";
-                    break;
+                    return "Atacante";
                 default:
-                    position = "Desconhecido";
-                    break;
+                    return "Desconhecido";
             }
-
-            return new Atleta
-            {
-                Id = playerDTO.Player.Id,
-                Nome = playerDTO.Player.Name,
-                Idade = playerDTO.Player.Age,
-                Nacionalidade = playerDTO.Player.Nationality,
-                FotoUrl = playerDTO.Player.Photo,
-                Posicao = position,
-                Overall = overall,
-                EquipeId = stats?.Team.Id ?? 0,
-                LigaId = stats?.League.Id ?? 0
-            };
         }
 
-        private double OverallLeagueMapper(int league)
+        private static double OverallLeagueMapper(int league)
         {
             switch (league)
             {

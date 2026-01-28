@@ -1,4 +1,5 @@
-﻿using LigaDS.Models;
+﻿using LigaDS.Mappers;
+using LigaDS.Models;
 using LigaDS.Repository.Interfaces;
 using LigaDS.Services.Interfaces;
 
@@ -20,20 +21,11 @@ namespace LigaDS.Services
 
             foreach (var teamDTO in teamsDTO)
             {
-                equipes.Add(ConvertToEquipeModel(teamDTO));
+                var equipe = EquipeMapper.ToEquipeModel(teamDTO);
+                equipes.Add(equipe);
             }
 
             return equipes;
-        }
-
-        public Equipe ConvertToEquipeModel(TeamFetchDTO teamDTO)
-        {
-            return new Equipe
-            {
-                Id = teamDTO.Team.Id,
-                Nome = teamDTO.Team.Name,
-                LogoUrl = teamDTO.Team.Logo
-            };
         }
     }
 }

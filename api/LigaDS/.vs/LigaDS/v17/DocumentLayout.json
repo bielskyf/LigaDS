@@ -15,16 +15,16 @@
       "RelativeMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|solutionrelative:services\\atletafetchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|d:\\projetos\\ligads\\api\\ligads\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|d:\\projetos\\ligads\\api\\ligads\\mappers\\ligamapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|solutionrelative:mappers\\ligamapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|d:\\projetos\\ligads\\api\\ligads\\controllers\\atletacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|solutionrelative:controllers\\atletacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|d:\\projetos\\ligads\\api\\ligads\\mappers\\equipemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|solutionrelative:mappers\\equipemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|d:\\projetos\\ligads\\api\\ligads\\services\\apifootballservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|solutionrelative:services\\apifootballservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|d:\\projetos\\ligads\\api\\ligads\\mappers\\atletamapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B52DF526-466F-4A61-89DB-94282DD8E15B}|LigaDS.csproj|solutionrelative:mappers\\atletamapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,41 +42,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AtletaController.cs",
-              "DocumentMoniker": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Controllers\\AtletaController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AtletaController.cs",
-              "ToolTip": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Controllers\\AtletaController.cs",
-              "RelativeToolTip": "Controllers\\AtletaController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "LigaFetchService.cs",
+              "DocumentMoniker": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Services\\LigaFetchService.cs",
+              "RelativeDocumentMoniker": "Services\\LigaFetchService.cs",
+              "ToolTip": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Services\\LigaFetchService.cs",
+              "RelativeToolTip": "Services\\LigaFetchService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T21:29:42.988Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACMAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T21:20:29.783Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AtletaFetchService.cs",
-              "DocumentMoniker": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Services\\AtletaFetchService.cs",
-              "RelativeDocumentMoniker": "Services\\AtletaFetchService.cs",
-              "ToolTip": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Services\\AtletaFetchService.cs",
-              "RelativeToolTip": "Services\\AtletaFetchService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T21:06:10.125Z",
+              "WhenOpened": "2026-01-28T22:22:51.776Z",
               "EditorCaption": ""
             },
             {
@@ -87,35 +61,61 @@
               "RelativeDocumentMoniker": "Services\\EquipeFetchService.cs",
               "ToolTip": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Services\\EquipeFetchService.cs",
               "RelativeToolTip": "Services\\EquipeFetchService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAQwBgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T21:05:14.285Z",
+              "WhenOpened": "2026-01-28T22:22:29.087Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LigaFetchService.cs",
-              "DocumentMoniker": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Services\\LigaFetchService.cs",
-              "RelativeDocumentMoniker": "Services\\LigaFetchService.cs",
-              "ToolTip": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Services\\LigaFetchService.cs",
-              "RelativeToolTip": "Services\\LigaFetchService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "LigaMapper.cs",
+              "DocumentMoniker": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Mappers\\LigaMapper.cs",
+              "RelativeDocumentMoniker": "Mappers\\LigaMapper.cs",
+              "ToolTip": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Mappers\\LigaMapper.cs",
+              "RelativeToolTip": "Mappers\\LigaMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T21:04:58.95Z",
+              "WhenOpened": "2026-01-28T22:17:52.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EquipeMapper.cs",
+              "DocumentMoniker": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Mappers\\EquipeMapper.cs",
+              "RelativeDocumentMoniker": "Mappers\\EquipeMapper.cs",
+              "ToolTip": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Mappers\\EquipeMapper.cs",
+              "RelativeToolTip": "Mappers\\EquipeMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T22:16:25.458Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ApiFootballService.cs",
-              "DocumentMoniker": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Services\\ApiFootballService.cs",
-              "RelativeDocumentMoniker": "Services\\ApiFootballService.cs",
-              "ToolTip": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Services\\ApiFootballService.cs",
-              "RelativeToolTip": "Services\\ApiFootballService.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAcwBAAAAAdAAAAAAAAAA==",
+              "Title": "AtletaMapper.cs",
+              "DocumentMoniker": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Mappers\\AtletaMapper.cs",
+              "RelativeDocumentMoniker": "Mappers\\AtletaMapper.cs",
+              "ToolTip": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Mappers\\AtletaMapper.cs",
+              "RelativeToolTip": "Mappers\\AtletaMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T21:04:06.228Z",
+              "WhenOpened": "2026-01-28T22:12:30.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AtletaFetchService.cs",
+              "DocumentMoniker": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Services\\AtletaFetchService.cs",
+              "RelativeDocumentMoniker": "Services\\AtletaFetchService.cs",
+              "ToolTip": "D:\\Projetos\\LigaDS\\api\\LigaDS\\Services\\AtletaFetchService.cs",
+              "RelativeToolTip": "Services\\AtletaFetchService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA2wC4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T22:14:10.281Z",
               "EditorCaption": ""
             }
           ]
