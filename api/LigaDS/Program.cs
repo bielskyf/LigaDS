@@ -17,9 +17,23 @@ builder.Services.AddDbContext<LigaDbContext>( options =>
     )
 );
 
-builder.Services.AddHttpClient<IApiFootballService, ApiFootballService>();
-builder.Services.AddScoped<IAtletaService, AtletaService>();
-builder.Services.AddScoped<IEquipeService, EquipeService>();
+builder.Services.AddHttpClient<IApiFootballService, ApiFootballService>( client =>
+{
+    var apiKey = Environment.GetEnvironmentVariable("API_FOOTBALL_KEY");
+
+    if (string.IsNullOrEmpty(apiKey))
+    {
+        throw new Exception("API_FOOTBALL_KEY não configurada no .env.local");
+    }
+
+    client.BaseAddress = new Uri("https://v3.football.api-sports.io/");
+    client.DefaultRequestHeaders.Add("x-rapidapi-key", apiKey);
+    client.Timeout = TimeSpan.FromSeconds(30);
+});
+
+builder.Services.AddScoped<IAtletaFetchService, AtletaFetchService>();
+builder.Services.AddScoped<IEquipeFetchService, EquipeFetchService>();
+builder.Services.AddScoped<ILigaFetchService, LigaFetchService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

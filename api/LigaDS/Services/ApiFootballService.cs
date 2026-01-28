@@ -10,30 +10,16 @@ namespace LigaDS.Services
         private readonly HttpClient _httpClient;
         private readonly JsonSerializerOptions _jsonOptions;
         private readonly ILogger _logger;
-        private readonly string _apiKey;
 
         public ApiFootballService(HttpClient httpClient, ILogger<ApiFootballService> logger)
         {
             _httpClient = httpClient;
-
-            // Lido do arquivo .env.local
-            _apiKey = Environment.GetEnvironmentVariable("API_EXTERNA_KEY");
-
-            if (string.IsNullOrEmpty(_apiKey))
-            {
-                throw new Exception("Configurações da API externa não encontradas. Configure o arquivo .env.local");
-            }
-
-            _httpClient.BaseAddress = new Uri("https://v3.football.api-sports.io/");
-
-            _httpClient.DefaultRequestHeaders.Add("x-rapidapi-key", _apiKey);
+            _logger = logger;
 
             _jsonOptions = new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true
             };
-
-            _logger = logger;
         }
 
         private async Task<List<PlayerFetchDTO>> GetPlayersAsync(int league, int season, int page, List<PlayerFetchDTO> playersDTO)
@@ -111,6 +97,32 @@ namespace LigaDS.Services
             }
 
             return teamsDTO;
+        }
+
+        public async Task<LeagueFetchDTO> GetLeagueAsync(int league, int season)
+        {
+            var liga = new LeagueFetchDTO();
+
+            try
+            {
+                var response = await _httpClient.GetAsync($"leagues?id={league}&season={season}");
+
+                response.EnsureSuccessStatusCode();
+
+                var apiResponse = await response.Content.ReadFromJsonAsync<ApiLeaguesResponse>(_jsonOptions);
+
+                if (apiResponse?.Response != null && apiResponse.Response.Count > 0)
+                {
+                    liga = apiResponse.Response[0];
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogInformation("Erro ao obter liga: {Message}", ex.Message);
+                return null;
+            }
+
+            return liga;
         }
     }
 }

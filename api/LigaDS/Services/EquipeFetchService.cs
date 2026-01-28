@@ -4,11 +4,11 @@ using LigaDS.Services.Interfaces;
 
 namespace LigaDS.Services
 {
-    public class EquipeService : IEquipeService
+    public class EquipeFetchService : IEquipeFetchService
     {
         private readonly IApiFootballService _apiFootballService;
 
-        public EquipeService(IApiFootballService apiFootballService)
+        public EquipeFetchService(IApiFootballService apiFootballService)
         {
             _apiFootballService = apiFootballService;
         }

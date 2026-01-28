@@ -17,4 +17,15 @@ namespace LigaDS.Models
         public int Id { get; set; }
         public string? Name { get; set; }
     }
+
+    public class LeagueFetchDTO
+    {
+        public League League { get; set; }
+    }
+
+    public class ApiLeaguesResponse
+    {
+        public Paging Paging { get; set; }
+        public List<LeagueFetchDTO> Response { get; set; }
+    }
 }

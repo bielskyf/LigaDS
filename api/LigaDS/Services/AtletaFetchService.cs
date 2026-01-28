@@ -3,11 +3,11 @@ using LigaDS.Services.Interfaces;
 
 namespace LigaDS.Services
 {
-    public class AtletaService : IAtletaService
+    public class AtletaFetchService : IAtletaFetchService
     {
         private readonly IApiFootballService _apiFootballService;
 
-        public AtletaService(IApiFootballService apiFootballService)
+        public AtletaFetchService(IApiFootballService apiFootballService)
         {
             _apiFootballService = apiFootballService;
         }
@@ -19,17 +19,17 @@ namespace LigaDS.Services
 
             foreach (var playerDTO in playersDTO)
             {
-                atletas.Add(ConvertToAtletaModel(playerDTO));
+                atletas.Add(ConvertToAtletaModel(playerDTO, league));
             }
             
             return atletas;
         }
 
-        public Atleta ConvertToAtletaModel(PlayerFetchDTO playerDTO)
+        public Atleta ConvertToAtletaModel(PlayerFetchDTO playerDTO, int league)
         {
             var stats = playerDTO.Statistics.FirstOrDefault();
             string position = string.Empty;
-            int overall = Convert.ToInt32(Convert.ToDouble(stats?.Games.Rating ?? 5) * 10);
+            int overall = Convert.ToInt32(Convert.ToDouble(stats?.Games.Rating ?? 5) * OverallLeagueMapper(league));
 
             switch (stats?.Games.Position)
             {
@@ -62,6 +62,27 @@ namespace LigaDS.Services
                 EquipeId = stats?.Team.Id ?? 0,
                 LigaId = stats?.League.Id ?? 0
             };
+        }
+
+        private double OverallLeagueMapper(int league)
+        {
+            switch (league)
+            {
+                case 39: // Premier League
+                    return 9.6;
+                case 140: // La Liga
+                    return 9.1;
+                case 78: // Bundesliga
+                    return 8.6;
+                case 135: // Serie A
+                    return 8.8;
+                case 61: // Ligue 1
+                    return 8.3;
+                case 71: // Brasileirão Série A
+                    return 7.9;
+                default:
+                    return 7.5;
+            }
         }
     }
 }

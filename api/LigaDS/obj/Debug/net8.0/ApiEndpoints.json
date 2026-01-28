@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "LigaDS.Controllers.AtletaController",
-    "Method": "GetAllNewPlayersAsync",
+    "Method": "GetAllAtletasAsync",
     "RelativePath": "api/Atleta",
     "HttpMethod": "GET",
     "IsController": true,
